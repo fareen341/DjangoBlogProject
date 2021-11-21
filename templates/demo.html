@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+ 
+    <title>The TechBlog | BlogDetails</title>
+  </head>
+  <body>
+
+<div class="container">
+<p class="bg-info text-light text-center p-2 mt-2 display-6 mt-5">{{blog.title}}</p>
+    <div class="row">
+        <div class="col-lg-8">
+          <p><b>Id:</b><span class="ms-5">{{blog.id}}</span></p>
+          <p><b>Title:</b><span class="ms-5">{{blog.title}}</span></p>
+          <p><b>Slug:</b><span class="ms-5">{{blog.slug}}</span></p>
+          <p><b>Tag:</b><span class="ms-5">{{blog.tag}}</span></p>
+          <p><b>Author:</b><span class="ms-5">{{blog.author}}</span></p>
+          <p><b>Date:</b><span class="ms-5">{{blog.date}}</span></p>
+          <p><b>Content:</b><span class="ms-5">{{blog.content|linebreaksbr}}</span></p>
+          <p><b>Code:</b><span class="ms-5">{{blog.code|linebreaksbr}}</span></p>
+          <p><b>Featured image:</b><span class="ms-5"> <img src="{{blog.featured_image.url}}" height="200px;" width="300px;"></span></p>
+
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+  </body>
+</html>
+

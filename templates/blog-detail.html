@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BlogDetail{% endblock title %}
+
+{% block body %} 
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+        <h3 class="p-2 mt-2 display-6 mt-5"><span style="font-size:20px;" class="text-primary">{{blog.tag}}</span><br>{{blog.title}}</h2>
+        <p class="text-muted text-end">Fareen Ansari<br><span>{{blog.date}}</span></p>
+            <img src="{{blog.featured_image.url}}" height="400px" width="100%">
+            
+        </div>
+        <div class="col-lg-6 my-5">
+            <p style="font-size:19px; text-align:justify;">{{blog.content|linebreaksbr}}</p>
+            {% if blog.code %}
+            <p class="p-3" style=" text-align:justify; background-color:#f2f2f2; height:300px; width:100%; overflow-x: scroll; ">{{blog.code|linebreaksbr}}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock body %}

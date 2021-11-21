@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <!--For data table-->
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+    <title>The TechBlog | BlogDetails</title>
+  </head>
+  <body>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col-lg-6 text-center mt-5">
+        <p class="lead display-6">Are you sure you want to delete the record?</p>
+        <form action="" method="POST">
+        {% csrf_token %}
+        <span><input class="btn btn-danger me-4 px-3 py-2" type="submit" value="Delete"></span>
+        <span><a class="btn btn-dark text-decoration-none  px-3 py-2" href="{% url 'addblog' %}">Cancel</a></span>
+        </form>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+  </body>
+</html>
+
